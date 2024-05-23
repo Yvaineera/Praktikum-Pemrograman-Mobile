@@ -20,7 +20,6 @@ class MainActivity : AppCompatActivity() {
         val costEditText: EditText = findViewById(R.id.cost_of_service_edit_text)
         val costString = costEditText.text.toString()
 
-        // Check if costString is empty
         if (costString.isEmpty()) {
             displayTip(0.0)
             return
@@ -28,7 +27,6 @@ class MainActivity : AppCompatActivity() {
 
         val cost = costString.toDoubleOrNull()
 
-        // Handle invalid input
         if (cost == null || cost == 0.0) {
             displayTip(0.0)
             return
